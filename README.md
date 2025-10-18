@@ -25,6 +25,7 @@ Tablet: Sidebar overlays content
 Mobile: Full-width sidebar with backdrop
 The system now provides seamless navigation between all management modules while maintaining your existing functionality. Each page has its dedicated JavaScript file and the sidebar works consistently across all devices.
 
+https://princedev467.github.io/js-project/
 Ready to test! Open index.html and try navigating between the different management pages using the sidebar. The navigation should work smoothly with your existing backend API.
 
 
