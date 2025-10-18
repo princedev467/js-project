@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showtime Management - Cinema Management System</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h4><i class="fas fa-film me-2"></i>Cinema System</h4>
+            <button class="btn-close-sidebar" onclick="toggleSidebar()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home me-2"></i>Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="cinema.html" class="nav-link">
+                    <i class="fas fa-building me-2"></i>Cinema Management
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="movie.html" class="nav-link">
+                    <i class="fas fa-video me-2"></i>Movie Management
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-clock me-2"></i>Showtime Management
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Top Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <button class="btn-toggle-sidebar" onclick="toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <span class="navbar-brand mb-0 h1">
+                    <i class="fas fa-clock me-2"></i>Showtime Management
+                </span>
+                <div class="navbar-nav ms-auto">
+                    <span class="nav-link text-white">
+                        <i class="fas fa-user me-1"></i>Admin
+                    </span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card shadow">
+                        <div class="card-header bg-dark text-white">
+                            <h5 class="mb-0">
+                                <i class="fas fa-plus-circle me-2"></i>
+                                Add Showtime
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="Time_admin">
+                                <div class="mb-3">
+                                    <label for="showtime_cinema_list" class="form-label">Select Cinema</label>
+                                    <select class="form-select" id="showtime_cinema_list" onchange="handleShowtimeChange()">
+                                        <option value="0"># Select Cinema #</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="showtime_movie_list" class="form-label">Select Movie</label>
+                                    <select class="form-select" id="showtime_movie_list">
+                                        <option value="0"># Select Movie #</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="start_date" class="form-label">Start Date & Time</label>
+                                    <input type="datetime-local" class="form-control" id="start_date">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="end_date" class="form-label">End Date & Time</label>
+                                    <input type="datetime-local" class="form-control" id="end_date">
+                                </div>
+                                <button type="submit" class="btn btn-dark w-100">
+                                    <i class="fas fa-save me-2"></i>Save Showtime
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-header bg-secondary text-white">
+                            <h5 class="mb-0">
+                                <i class="fas fa-list me-2"></i>
+                                Showtime Schedule
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div id="showtime_disp"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Sidebar JS -->
+    <script src="sidebar.js"></script>
+    <!-- Showtime JS -->
+    <script src="showtime.js"></script>
+</body>
+</html>
