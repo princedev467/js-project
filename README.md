@@ -1,4 +1,10 @@
 <img width="1920" height="1080" alt="Screenshot 2025-10-18 111834" src="https://github.com/user-attachments/assets/1147ae11-d047-4197-899e-2a5516e3a232" /># js-project
+it is only admin side:
+ if you want show data in this sysytem then go to vscode trminal and run command:
+ 1. cd .\json-server\
+ 2. npx json-server db.json     
+ 
+
 🎨 Enhanced UI/UX:
 Gradient sidebar with professional styling
 Dashboard statistics cards showing live counts
